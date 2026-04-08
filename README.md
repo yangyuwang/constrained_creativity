@@ -1,2 +1,8 @@
-# constrained_creativity
-Project for MACS Thesis
+# Constrained Creativity: How Social and Geographical Factors Shape Painting Style Learning and Evolution?
+Project for MACS Thesis 2026
+
+Author: Yangyu Wang
+
+## Abstract
+
+How does artistic creativity evolve through social interaction and geographical proximity? While aesthetic traditions often frame creativity as the achievement of individual genius, sociological approaches suggest that artistic production is embedded in networks, conventions, and spatially organized worlds of interaction. This paper examines how painting styles evolve under social and geographical constraints by combining statistical modeling with generative simulation. Empirically, the statistical analysis draws on a large historical painting archive that links paintings and artists, while the simulation focuses on a historical artist community centered on 1920s Paris. Using flow-based model for style extraction, I estimate regression models, which show that stylistic learning is associated with social interactions and distances, while there are moderating effects showing mimicry and distancing dynamics. To assess whether these micro-level mechanisms can reproduce broader historical patterns, I then translate the estimated learning process into a generative simulation in which artist agents repeatedly generate, learn, and update styles over time. The simulation recovers part of the observed historical structure, especially in broad stylistic position, though it is less successful in reproducing the exact direction of stylistic change. Overall, the paper argues that artistic creativity is best understood not as isolated innovation, but as a dynamic process shaped by social and geographical constraints.
