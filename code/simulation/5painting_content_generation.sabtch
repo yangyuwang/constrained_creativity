@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=content_extract
+#SBATCH --partition=ssd-gpu
+#SBATCH --account=ssd
+#SBATCH --qos=ssd
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=16
+#SBATCH --array=0-2
+#SBATCH --mem=64G
+#SBATCH --time=30:00:00
+#SBATCH --output=logs/5content_extract_%a.out
+#SBATCH --error=logs/5content_extract_%a.err
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=wangyd@rcc.uchicago.edu
+
+module load python/anaconda-2022.05
+source activate gallery_gpt
+
+python code/simulation/5painting_content_generation.py \
+  yangyu/artwork_images \
+  yangyu/llava-v1.6-mistral-7b-hf \
+  --out data/painting_content_${SLURM_ARRAY_TASK_ID}.jsonl \
+  --length 32

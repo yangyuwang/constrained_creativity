@@ -1,0 +1,5 @@
+# jid1=$(sbatch code/simulation/6baseline_model_training.sbatch | awk '{print $4}')
+jid2=$(sbatch code/simulation/7baseline_agent_training.sbatch | awk '{print $4}')
+sbatch --dependency=afterok:$jid2 code/simulation/8simulation_config.sbatch
+
+sbatch --dependency=afterok:47006010 code/simulation/9embedding_extraction_sim.sbatch
